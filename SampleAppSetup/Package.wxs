@@ -18,7 +18,7 @@
 
 				<File
 				  Id="SampleAppEXE"
-				  Source="$(var.SampleApp.TargetPath)"
+				  Source="$(var.SampleApp.TargetDir)SampleApp.exe"
 				  KeyPath="yes" />
 
 			</Component>
@@ -27,7 +27,7 @@
 
 		<Feature
 		  Id="ProductFeature"
-		  Title="SampleApp"
+		  Title="SampleAppSetup"
 		  Level="1">
 
 			<ComponentRef Id="MainExecutable" />
