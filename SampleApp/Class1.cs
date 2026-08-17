@@ -1,7 +1,13 @@
-﻿namespace SampleApp
+﻿using System;
+namespace SampleApp
 {
-    public class Class1
+    class Program
     {
-
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Deployment Activity 1: Pass Task Completed!");
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
     }
 }
