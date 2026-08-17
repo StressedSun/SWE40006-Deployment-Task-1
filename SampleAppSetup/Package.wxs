@@ -21,6 +21,18 @@
 				  Source="$(var.SampleApp.TargetDir)SampleApp.exe"
 				  KeyPath="yes" />
 
+				<File
+				  Id="SampleAppDLL"
+				  Source="$(var.SampleApp.TargetDir)SampleApp.dll" />
+
+				<File
+				  Id="SampleAppDeps"
+				  Source="$(var.SampleApp.TargetDir)SampleApp.deps.json" />
+
+				<File
+				  Id="SampleAppRuntimeConfig"
+				  Source="$(var.SampleApp.TargetDir)SampleApp.runtimeconfig.json" />
+
 			</Component>
 
 		</DirectoryRef>
