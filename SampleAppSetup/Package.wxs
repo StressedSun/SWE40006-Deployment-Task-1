@@ -1,21 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="SampleApp Setup" Language="1033" Version="1.0.0.0" Manufacturer="SwinburneStudent"
-	UpgradeCode="B219184C-E3C0-40BE-8E2C-18DF7AB9CDAD">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+	<Package
+	  Name="SampleApp Setup"
+	  Manufacturer="SwinburneStudent"
+	  Version="1.0.0.0"
+	  UpgradeCode="B219184C-E3C0-40BE-8E2C-18DF7AB9CDAD">
+
 		<MediaTemplate EmbedCab="yes" />
-		<Directory Id="TARGETDIR" Name="SourceDir">
-			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="SampleApp" />
-			</Directory>
-		</Directory>
+
 		<DirectoryRef Id="INSTALLFOLDER">
-			<Component Id="MainExecutable" Guid="FF9AFB36-F863-46DF-8AA4-07F38AB6EB65">
-				<File Id="SampleAppEXE" Source="$(var.SampleApp.TargetPath)" KeyPath="yes" />
+
+			<Component
+			  Id="MainExecutable"
+			  Guid="FF9AFB36-F863-46DF-8AA4-07F38AB6EB65">
+
+				<File
+				  Id="SampleAppEXE"
+				  Source="$(var.SampleApp.TargetPath)"
+				  KeyPath="yes" />
+
 			</Component>
+
 		</DirectoryRef>
-		<Feature Id="ProductFeature" Title="SampleAppSetup" Level="1">
+
+		<Feature
+		  Id="ProductFeature"
+		  Title="SampleApp"
+		  Level="1">
+
 			<ComponentRef Id="MainExecutable" />
+
 		</Feature>
-	</Product>
+
+	</Package>
+
 </Wix>
